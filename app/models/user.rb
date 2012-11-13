@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
-  belongs_to :task
-  has_one :score
+  has_and_belongs_to_many :tasks
+  has_many :scores, :through => tasks
 end
